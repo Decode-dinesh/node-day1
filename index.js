@@ -21,8 +21,8 @@ fs.writeFile('./test.txt', fileName, err => {
 
 });
 
-app.get(`/${fileName}`, (req, res) => {
-    fs.readFile(`${fileName}.txt`, "utf-8", (err, data) =>{
+app.get('/test.txt', (req, res) => {
+    fs.readFile('test.txt', "utf-8", (err, data) =>{
         if (err) throw err;
         res.send(data);
     });
